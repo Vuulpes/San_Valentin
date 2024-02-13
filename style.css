@@ -266,10 +266,6 @@ body {
     color: #a10000;
 }
 
-/* Estilos generales que se aplican independientemente del tamaño de la pantalla */
-/* ... */
-
-/* Estilos específicos para pantallas más pequeñas (por ejemplo, teléfonos) */
 @media screen and (max-width: 768px) {
     #envelope {
         width: 80%;
