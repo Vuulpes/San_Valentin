@@ -1,14 +1,13 @@
-body {
-    background-color: #f7d9da;
-}
-
 #envelope {
-    margin: 150px auto;
+    margin: 150px;
     position: relative;
     width: 280px;
     height: 180px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
     background-color: #f9c5c8;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -44,7 +43,8 @@ body {
     position: relative;
     background-color: #f9c5c8;
     width: 90%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     height: 90%;
     top: 5%;
     border-radius: 6px;
@@ -67,8 +67,6 @@ body {
     width: 80%;
     height: 14%;
     background-color: #fdb7ba;
-    font-size: 16px;
-    line-height: 1.2;
 }
 
 .words.line1 {
@@ -155,20 +153,15 @@ body {
     animation: none;
 }
 
-.a1,
-.a2,
-.a3 {
-    transform-origin: bottom;
-}
-
 .a1 {
     left: 20%;
     transform: scale(0.6);
     opacity: 1;
     -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-    animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+    -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
 }
 
@@ -177,9 +170,10 @@ body {
     transform: scale(1);
     opacity: 1;
     -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-    animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+    -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
 }
 
@@ -188,10 +182,21 @@ body {
     transform: scale(0.8);
     opacity: 1;
     -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-    animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+    -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -600px;
+    }
 }
 
 @keyframes slideUp {
@@ -204,6 +209,16 @@ body {
     }
 }
 
+@-webkit-keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 50px;
+    }
+}
+
 @keyframes sideSway {
     0% {
         margin-left: 0px;
@@ -212,6 +227,14 @@ body {
     100% {
         margin-left: 50px;
     }
+}
+
+body {
+    background-color: #f7d9da;
+}
+
+.envlope-wrapper {
+    height: 380px;
 }
 
 .reset {
@@ -246,6 +269,22 @@ body {
 @media screen and (max-width: 768px) {
     #envelope {
         width: 80%;
+        /* Ajusta el ancho del sobre */
     }
 
-    .
+    .letter {
+        width: 90%;
+        /* Ajusta el ancho de la carta */
+        height: 90%;
+        /* Ajusta la altura de la carta */
+        top: 5%;
+        /* Ajusta la posición vertical de la carta */
+        left: 5%;
+        /* Ajusta la posición horizontal de la carta */
+    }
+
+    .words {
+        font-size: 14px;
+        /* Ajusta el tamaño de fuente de las palabras */
+    }
+}
