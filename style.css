@@ -265,26 +265,3 @@ body {
     background-color: #fc9d9d;
     color: #a10000;
 }
-
-@media screen and (max-width: 768px) {
-    #envelope {
-        width: 80%;
-        /* Ajusta el ancho del sobre */
-    }
-
-    .letter {
-        width: 90%;
-        /* Ajusta el ancho de la carta */
-        height: 90%;
-        /* Ajusta la altura de la carta */
-        top: 5%;
-        /* Ajusta la posición vertical de la carta */
-        left: 5%;
-        /* Ajusta la posición horizontal de la carta */
-    }
-
-    .words {
-        font-size: 14px;
-        /* Ajusta el tamaño de fuente de las palabras */
-    }
-}
