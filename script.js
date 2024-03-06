@@ -6,9 +6,9 @@ $(document).ready(function () {
     openButton.click(function () {
         envelope.removeClass("close").addClass("open");
         // Agregar el mensaje "Feliz Día de San Valentín" al abrir la carta
-        $(".line1").text("21/02");
-        $(".line2").text("Feliz Cumpleaños Rubí");
-        $(".line3").text("____Se te aprecia");
+        $(".line1").text("");
+        $(".line2").text("");
+        $(".line3").text("");
         $(".line4").text("");
     });
 
